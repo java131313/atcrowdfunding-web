@@ -1,0 +1,50 @@
+# log4j root
+#log4j.rootLogger = INFO, jLog, jFile, JHtml
+#
+## Console
+#log4j.appender.jLog = org.apache.log4j.ConsoleAppender
+#log4j.appender.jLog.layout = org.apache.log4j.PatternLayout
+#log4j.appender.jLog.layout.ConversionPattern = [%d{yyyy-MM-dd HH:mm:ss}] - %m%n
+#
+## File
+#log4j.appender.jFile = org.apache.log4j.DailyRollingFileAppender
+#log4j.appender.jFile.encoding=UTF-8
+#log4j.appender.jFile.File = ../logs/
+#log4j.appender.jFile.DatePattern='-'yyyy-MM-dd-HH'.log'
+#log4j.appender.jFile.MaxFileSize=1024KB
+#log4j.appender.jFile.layout = org.apache.log4j.PatternLayout
+#log4j.appender.jFile.layout.ConversionPattern = [%d{yyyy-MM-dd HH:mm:ss}] - %m%n
+#
+## HTML
+#log4j.appender.JHtml=org.apache.log4j.RollingFileAppender
+#log4j.appender.JHtml.encoding=GB2312
+#log4j.appender.JHtml.File=../logs/sys_ztb_log.html
+#log4j.appender.JHtml.MaxFileSize=4000KB
+#log4j.appender.JHtml.layout=org.apache.log4j.HTMLLayout
+#
+## MyBatis
+##log4j.logger.com.sanhai.pay.mapper=TRACE
+#log4j.logger.com.sanhai.nep.mesosphere.repository=DEBUG
+log4j.rootLogger=debug,appender1,appender2
+
+log4j.appender.appender1=org.apache.log4j.ConsoleAppender
+log4j.appender.appender1.layout=org.apache.log4j.PatternLayout
+log4j.appender.appender1.layout.ConversionPattern=[%d{HH\:mm\:ss\:SSS}] %m%n
+
+log4j.appender.appender2=org.apache.log4j.RollingFileAppender
+log4j.appender.appender2.File=../log/nepMesosphere.log
+log4j.appender.appender2.MaxFileSize=1024KB
+log4j.appender.appender2.layout=org.apache.log4j.PatternLayout
+##log4j.appender.appender2.layout.ConversionPattern=%C.%M(%F:%L) [%d{HH\:mm\:ss\:SSS}] %m%n
+log4j.appender.appender2.layout.ConversionPattern=[%F:%L] [%d{yyyy-MM-dd HH:mm:ss}] %m%n
+
+###show sql
+# Print SQL
+log4j.logger.com.ibatis=DEBUG
+log4j.logger.com.ibatis.common.jdbc.SimpleDataSource=DEBUG
+log4j.logger.com.ibatis.common.jdbc.ScriptRunner=DEBUG
+log4j.logger.com.ibatis.sqlmap.engine.impl.SqlMapClientDelegate=DEBUG
+log4j.logger.java.sql.Connection=DEBUG
+log4j.logger.java.sql.Statement=DEBUG
+log4j.logger.java.sql.PreparedStatement=DEBUG, A1
+
