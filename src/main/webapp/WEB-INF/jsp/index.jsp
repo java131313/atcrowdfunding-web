@@ -610,7 +610,19 @@ h3.break>a {
                      <a rel="nofollow" href="http://www.atguigu.com">关于我们</a> | <a rel="nofollow" href="http://www.atguigu.com">服务条款</a> | <a rel="nofollow" href="http://www.atguigu.com">免责声明</a> | <a rel="nofollow" href="http://www.atguigu.com">网站地图</a> | <a rel="nofollow" href="http://www.atguigu.com">联系我们</a>
                 </div>
                 <div class="copyRight">
-                    Copyright ?2017-2017atguigu.com 版权所有
+                    Copyright ?2017-2017atguigu.com 版权所有<button id="btnId" >点一下</button>
+                    <div class="inner" >
+                    		<p>
+                    			你喜欢哪个城市。
+                    			<ul id="city">
+                    				<li id="bj" >北京</li>
+                    				<li>上海</li>
+                    				<li>东京</li>
+                    				<li>首尔</li>
+                    			</ul>
+                    		</p>
+                    </div>
+                    
                 </div>
             </div>
             
@@ -630,6 +642,13 @@ h3.break>a {
     $(".thumbnail img").click(function(){
         window.location.href = "project.html";
     });
+    </script>
+    <script type="text/javascript">
+    		$(function(){
+    			$("#btnId").click(function(){
+    				alert("hello");	
+    			})
+    		})
     </script>
   </body>
 </html>
