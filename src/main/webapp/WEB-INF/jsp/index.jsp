@@ -646,7 +646,13 @@ h3.break>a {
     <script type="text/javascript">
     		$(function(){
     			$("#btnId").click(function(){
-    				alert("hello");	
+    				/*,传入参数为【选择器字符串时】；根据字符串查找元素节点对象
+    				alert("hello"+ $("#bj").text());	*/
+   				$("<li>广州</li>").appendTo($("#city"));
+    				//dom对象
+    				var bjElement = document.getElementById('bj');
+    				alert( $(bjElement).text() );
+    				//将DOM对象转化为jQ对象
     			})
     		})
     </script>
